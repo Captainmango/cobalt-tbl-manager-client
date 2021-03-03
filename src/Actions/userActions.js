@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 export const createNewUser = (data) => {
     return (dispatch) => {
       dispatch({ type: "CREATE_NEW_USER" });
-      fetch('http://localhost:3001/signup', {
+      fetch('https://cobalt-table-manager-api.herokuapp.com/signup', {
           method: 'POST',
           mode: 'cors',
           headers: {'Content-Type': 'application/json' },
@@ -31,7 +31,7 @@ export const createNewUser = (data) => {
 export const logInUser = (username, password) => {
     return (dispatch) => {
         dispatch({ type: "LOGIN_USER" });
-        fetch('http://localhost:3001/login', {
+        fetch('https://cobalt-table-manager-api.herokuapp.com/login', {
             method: 'POST',
             mode: 'cors',
             headers: {'Content-Type': 'application/json' },

@@ -21,7 +21,7 @@ export const fetchPreviousLocations = (user_id) => {
 export const fetchAllRestaurants = () => {
     return (dispatch) => {
         dispatch({type: "FETCH_ALL_RESTAURANTS"});
-        fetch(`http://localhost:3001/restaurants`, {
+        fetch(`https://cobalt-table-manager-api.herokuapp.com/restaurants`, {
             method: 'GET',
             mode: 'cors',
             headers: {'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export const fetchAllRestaurants = () => {
 export const searchRestaurants = (searchTerm) => {
     return (dispatch) => {
         dispatch({type: "SEARCH_RESTAURANTS"});
-        fetch(`http://localhost:3001/restaurants/${searchTerm}`, {
+        fetch(`https://cobalt-table-manager-api.herokuapp.com/${searchTerm}`, {
             method: "GET",
             mode: "cors",
             headers: {

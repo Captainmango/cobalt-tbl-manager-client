@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 export const fetchMyReservations = (user_id) => {
     return (dispatch) => {
         dispatch({type: "FETCH_RESERVATIONS"});
-        fetch(`http://localhost:3001/users/${user_id}/reservations`, {
+        fetch(`https://cobalt-table-manager-api.herokuapp.com/users/${user_id}/reservations`, {
             method: 'GET',
             mode: 'cors',
             headers: {'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ export const fetchMyReservations = (user_id) => {
 export const postReservation = (user_id, reservation) => {
     return (dispatch) => {
         dispatch({type: "POST_RESERVATION"});
-        fetch(`http://localhost:3001/users/${user_id}/reservations`, {
+        fetch(`https://cobalt-table-manager-api.herokuapp.com/users/${user_id}/reservations`, {
             method: 'POST',
             mode: 'cors',
             headers: {'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export const postReservation = (user_id, reservation) => {
 export const updateReservationRating = (user_id, reservation, rating) => {
     return (dispatch) => {
         dispatch({type: "UPDATE_RESERVATION"});
-        fetch(`http://localhost:3001/users/${user_id}/reservations/${reservation.id}`, {
+        fetch(`https://cobalt-table-manager-api.herokuapp.com/users/${user_id}/reservations/${reservation.id}`, {
             method: 'PATCH',
             mode: 'cors',
             headers: {'Content-Type': 'application/json',
