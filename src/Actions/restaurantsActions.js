@@ -39,7 +39,7 @@ export const fetchAllRestaurants = () => {
 export const searchRestaurants = (searchTerm) => {
     return (dispatch) => {
         dispatch({type: "SEARCH_RESTAURANTS"});
-        fetch(`https://cobalt-table-manager-api.herokuapp.com/${searchTerm}`, {
+        fetch(`https://cobalt-table-manager-api.herokuapp.com/restaurants/${searchTerm}`, {
             method: "GET",
             mode: "cors",
             headers: {
